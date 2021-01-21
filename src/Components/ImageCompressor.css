@@ -9,12 +9,21 @@
   display: flex;
   flex-direction: column;
   margin-left: 20px;
+  margin: 10px;
 }
 
 .imageCompressor__upload > input {
   display: flex;
   margin-top: 30px;
   padding: 20px;
+}
+
+.imageCompressor__circularSlider {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 80px;
 }
 
 .imageCompressor__container {
@@ -30,4 +39,8 @@
 
 .compressed__image {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
 }
