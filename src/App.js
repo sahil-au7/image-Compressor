@@ -1,10 +1,12 @@
-import './App.css';
+import "./App.css";
+import Header from "./Components/UI/Header";
+import ImageCompressor from "./Components/ImageCompressor";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Welcome to my app</h1>
-
+    <div className="app">
+      <Header />
+      <ImageCompressor />
     </div>
   );
 }
