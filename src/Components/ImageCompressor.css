@@ -8,13 +8,15 @@
 .imageCompressor__upload {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   margin-left: 20px;
   margin: 10px;
 }
 
 .imageCompressor__upload > input {
   display: flex;
-  margin-top: 30px;
+  margin-top: 40px;
   padding: 20px;
 }
 
@@ -24,6 +26,10 @@
   flex-direction: column;
   justify-content: space-between;
   margin-top: 80px;
+}
+
+.imageCompressor__chooseFile {
+  text-decoration: none;
 }
 
 .imageCompressor__container {
@@ -37,10 +43,19 @@
   max-height: 300px;
 }
 
+.imageCompressor__sizeInfo {
+  margin-top: 10px;
+  padding: 20px;
+}
+
 .compressed__image {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin: 10px;
+}
+
+.compressed__image > a {
+  text-decoration: none;
 }
