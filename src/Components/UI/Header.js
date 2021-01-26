@@ -12,11 +12,11 @@ const Header = () => {
         <h1>Image Compressor</h1>
       </div>
       <div className="header__links">
-        <a href="">
-          <LinkedInIcon className="header__linkLogo" />
+        <a href="https://www.linkedin.com/in/sahil-y-356416b9/">
+          <LinkedInIcon className="header__linkLogo hvr-grow" />
         </a>
-        <a href="">
-          <GitHubIcon className="header__linkLogo" />
+        <a href="https://github.com/sahil-au7/image-Compressor">
+          <GitHubIcon className="header__linkLogo hvr-grow" />
         </a>
       </div>
     </div>
