@@ -2,11 +2,14 @@
   padding: 0;
   margin: 0;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap");
+
 body {
+  background-color: rgb(19, 25, 33);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Yusei Magic", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

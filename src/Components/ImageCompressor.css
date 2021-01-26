@@ -33,7 +33,7 @@
 }
 
 .imageCompressor__container {
-  border: 1px solid black;
+  border: 1px solid white;
   width: 300px;
   height: 300px;
 }
@@ -43,9 +43,14 @@
   max-height: 300px;
 }
 
+.compressed_imageSize {
+  color: white;
+}
+
 .imageCompressor__sizeInfo {
   margin-top: 10px;
   padding: 20px;
+  color: white;
 }
 
 .compressed__image {
@@ -58,4 +63,28 @@
 
 .compressed__image > a {
   text-decoration: none;
+}
+
+@media (max-width: 850px) {
+  .imageCompressor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .imageCompressor__circularSlider {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+  .imageCompressor__circularSlider > button {
+    margin-top: 20px;
+  }
+
+  .compressed__image > p {
+    margin: 20px;
+  }
 }

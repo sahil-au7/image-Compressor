@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./ImageCompressor.css";
 import imageCompression from "browser-image-compression";
 import Button from "@material-ui/core/Button";
+import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 import CircularSlider from "@fseehawer/react-circular-slider";
 
 const ImageCompressor = () => {
@@ -49,13 +50,22 @@ const ImageCompressor = () => {
         ) : (
           <p></p>
         )}
-        <Button variant="contained" color="primary">
+        <Button
+          variant="contained"
+          color="default"
+          startIcon={<CloudUploadIcon />}
+        >
           <input
+            hidden
             className="imageCompressor__chooseFile"
             accept="image/*"
             onChange={handelFile}
             type="file"
-          ></input>
+            id="upload"
+          />
+          <label for="upload">
+            <strong>Upload</strong>
+          </label>
         </Button>
       </div>
       {image ? (
@@ -63,7 +73,10 @@ const ImageCompressor = () => {
           <CircularSlider
             label="reSize %"
             width={150}
-            labelColor=""
+            trackColor="#e4f9f5"
+            progressColorFrom="darkgray"
+            knobColor=""
+            labelColor="#e4f9f5"
             progressSize={20}
             trackSize={24}
             dataIndex={0}
@@ -74,8 +87,8 @@ const ImageCompressor = () => {
             direction="1"
             onChange={(value) => setQuality(value)}
           />
-          <Button onClick={reSizeImage} variant="contained" color="primary">
-            Resize
+          <Button onClick={reSizeImage} variant="contained" color="default">
+            <strong>Resize</strong>
           </Button>
         </div>
       ) : (
@@ -87,13 +100,15 @@ const ImageCompressor = () => {
             <img className="imageCompressor__image" src={newImage} alt="" />
           </div>
           {newFile ? (
-            <p>New Size : {(newFile.size / 1024 / 1024).toFixed(3)} MB</p>
+            <p className="compressed_imageSize">
+              New Size : {(newFile.size / 1024 / 1024).toFixed(3)} MB
+            </p>
           ) : (
             <p></p>
           )}
           <a href={newImage} download>
-            <Button variant="contained" color="primary">
-              Download
+            <Button variant="contained" color="default">
+              <strong>Download</strong>
             </Button>
           </a>
         </div>
